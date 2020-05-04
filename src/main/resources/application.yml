@@ -1,0 +1,35 @@
+server:
+  port: 4444
+
+spring.h2.console.enabled: true
+
+# http://localhost:8080/h2-console
+spring.datasource.url: jdbc:h2:file:/home/chris/tbrankingdb
+spring.datasource.driverClassName: org.h2.Driver
+spring.datasource.username: sa
+spring.datasource.password: password
+spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+tanglebay:
+  balancer: https://lb0.tanglebay.org/nodes;https://lb1.tanglebay.org/nodes;https://lb2.tanglebay.org/nodes
+  exclude:
+    key:
+    appName: POW Node
+  interval: 5000
+
+factor:
+  attachToTangle: 50
+  broadcastTransactions: 5
+  checkConsistency: 5
+  findTransactions: 5
+  getBalances: 3
+  getInclusionStates: 3
+  getNodeInfo: 1
+  getTransactionsToApprove: 3
+  getTrytes: 3
+  storeTransactions: 20
+  wereAddressesSpentFrom: 5

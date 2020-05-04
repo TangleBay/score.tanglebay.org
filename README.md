@@ -1,1 +1,2 @@
-# score.tanglebay.org
+# tanglebay-score
+
